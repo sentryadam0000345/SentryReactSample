@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>Sentry Demo</title><script src="https://browser.sentry-cdn.com/5.13.2/bundle.min.js" crossorigin="anonymous"></script><script>Sentry.init({
+      dsn: 'https://765f1d04b7444afd8844d6225c738734@o87286.ingest.sentry.io/5230154',
+      release: "878bc5743c990d151d7fdf54efb0b99464510af6",
+      environment: "prod",
+      beforeSend(event) {
+        // Check if it is an exception, if so, show the report dialog
+        if (event.exception) {
+          Sentry.showReportDialog();
+        }
+        return event;
+      }
+    });</script><link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet"><link href="/static/css/main.95cb08a1.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root" class="root"></div><script type="text/javascript" src="/static/js/main.ae140331.js"></script></body></html>
